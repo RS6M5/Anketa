@@ -1,0 +1,30 @@
+  <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>User Form</title>
+   </head>
+   <body>
+       <h1>User Information Form</h1>
+       <form method="POST">
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" required><br><br>
+           <label for="city">City:</label>
+           <input type="text" id="city" name="city" required><br><br>
+           <label for="hobby">Hobby:</label>
+           <input type="text" id="hobby" name="hobby" required><br><br>
+           <label for="age">Age:</label>
+           <input type="number" id="age" name="age" required><br><br>
+           <input type="submit" value="Submit">
+       </form>
+
+       {% if name and city and hobby and age %}
+           <h2>Submitted Information:</h2>
+           <p><strong>Name:</strong> {{ name }}</p>
+           <p><strong>City:</strong> {{ city }}</p>
+           <p><strong>Hobby:</strong> {{ hobby }}</p>
+           <p><strong>Age:</strong> {{ age }}</p>
+       {% endif %}
+   </body>
+   </html>
